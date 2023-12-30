@@ -7,35 +7,22 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, ActionBarImage, LogoTitle } from "@react-navigation/native-stack";
 
 import Home from '../screens/Home';
-import Header from '../components/Header';
 
 
 const Stack = createNativeStackNavigator();
 
-
-
-
 export default function AppStack() {
-  const logoText = 'Open Fashion';
-  const menuIcon = '../assets/icons/menu-icon.png';
-  const searchIcon = '../assets/icons/search-icon.png';
-  const cartIcon = '../assets/icons/cart-icon.png';
+
   return (
 
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-        name='='
+          name='Home'
           component={Home}
           options={{
-            headerRight: () => <Header
-              menuIcon={require(menuIcon)}
-              logoText={logoText}
-              searchIcon={require(searchIcon)}
-              cartIcon={require(cartIcon)} />
-            // ,headerLeft:()=> <Header/>
-          }}
-        />
+            headerShown: false
+          }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
