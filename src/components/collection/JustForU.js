@@ -4,33 +4,33 @@ import React from 'react'
 const JustForU = () => {
     const data = [{
         id: 1,
-        productImage: '../../assets/images/Rectangle324.png',
+        productImage: require('../../assets/images/Rectangle324.png'),
         productName: '21WN reversible angora cardigan',
         productPrice: '$120'
-
-    },
-    {
+    
+      },
+      {
         id: 2,
-        productImage: '../../assets/images/Rectangle324.png',
+        productImage: require('../../assets/images/Rectangle325.png'),
         productName: '21WN reversible angora cardigan',
         productPrice: '$120'
-
-    },
-    {
+    
+      },
+      {
         id: 3,
-        productImage: '../../assets/images/Rectangle324.png',
+        productImage: require('../../assets/images/Rectangle326.png'),
         productName: '21WN reversible angora cardigan',
         productPrice: '$120'
-
-    },
-    {
+    
+      },
+      {
         id: 4,
-        productImage: '../../assets/images/Rectangle324.png',
+        productImage: require('../../assets/images/Rectangle327.png'),
         productName: 'Oblong bag',
         productPrice: '$120'
-
-    },
-    ]
+    
+      },
+      ]
     return (
 
         <View style={styles.container}>
@@ -49,7 +49,7 @@ const JustForU = () => {
                     renderItem={({ item }) => {
                         return (
                             <View style={styles.containerCard}>
-                                <Image style={styles.cardimgStyle} source={require('../../assets/images/Rectangle325.png')} />
+                                <Image style={styles.cardimgStyle} source={item.productImage} />
                                 <View style={{ alignSelf: 'center', alignContent: 'center' }}>
                                     <Text>{item.productName}</Text>
                                 </View>
